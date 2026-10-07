@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Handsome Dan the bulldog mascot">
+  <!-- navy background -->
+  <rect width="120" height="120" fill="#00356b"/>
+  <!-- ears -->
+  <path d="M26 40 C18 30 22 20 34 22 C40 24 42 34 40 44 Z" fill="#8a6d4a"/>
+  <path d="M94 40 C102 30 98 20 86 22 C80 24 78 34 80 44 Z" fill="#8a6d4a"/>
+  <!-- head -->
+  <ellipse cx="60" cy="62" rx="36" ry="34" fill="#efe6d4"/>
+  <!-- cheeks / jowls -->
+  <ellipse cx="44" cy="76" rx="16" ry="15" fill="#f6f0e4"/>
+  <ellipse cx="76" cy="76" rx="16" ry="15" fill="#f6f0e4"/>
+  <!-- brow wrinkles -->
+  <path d="M42 46 q18 -10 36 0" fill="none" stroke="#d9ccb2" stroke-width="3" stroke-linecap="round"/>
+  <path d="M46 52 q14 -7 28 0" fill="none" stroke="#d9ccb2" stroke-width="3" stroke-linecap="round"/>
+  <!-- eyes -->
+  <circle cx="48" cy="58" r="5.5" fill="#1b2430"/>
+  <circle cx="72" cy="58" r="5.5" fill="#1b2430"/>
+  <circle cx="49.5" cy="56.5" r="1.6" fill="#ffffff"/>
+  <circle cx="73.5" cy="56.5" r="1.6" fill="#ffffff"/>
+  <!-- snout -->
+  <path d="M50 70 q10 -4 20 0 q4 10 -10 13 q-14 -3 -10 -13 Z" fill="#efe6d4"/>
+  <!-- nose -->
+  <ellipse cx="60" cy="71" rx="8" ry="5.5" fill="#1b2430"/>
+  <!-- mouth -->
+  <path d="M60 76 L60 84 M60 84 q-8 4 -14 0 M60 84 q8 4 14 0" fill="none" stroke="#6b5a3e" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- collar -->
+  <rect x="30" y="98" width="60" height="10" fill="#0e4c92"/>
+  <!-- gold Y tag -->
+  <rect x="54" y="104" width="12" height="12" fill="#d8b54e"/>
+  <text x="60" y="113.5" text-anchor="middle" font-family="Georgia, serif" font-size="9" font-weight="700" fill="#00356b">Y</text>
+</svg>

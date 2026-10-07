@@ -1,0 +1,26 @@
+# --- data & images (never commit per assignment) ---
+data/
+*.db
+*.sqlite
+*.sqlite3
+data.zip
+
+# --- secrets ---
+.env
+*.env
+!.env.example
+
+# --- python ---
+backend/.venv/
+.venv/
+__pycache__/
+*.pyc
+
+# --- node / vite ---
+frontend/node_modules/
+frontend/dist/
+node_modules/
+
+# --- os / editor ---
+.DS_Store
+Thumbs.db

@@ -1,0 +1,83 @@
+:root {
+  /* shades of Yale navy blue (Yale Blue is #00356b), pale but colorful */
+  --navy-900: #001a33; /* deepest navy */
+  --navy: #00356b;     /* Yale Blue - primary */
+  --navy-soft: #0e4c92; /* mid navy for hovers */
+  --blue: #286dc0;     /* brighter Yale accent blue */
+  --sky: #e6eef8;      /* pale navy-tinted background */
+  --cream: #f6f9fd;    /* very pale blue page wash */
+  --gold: #d8b54e;     /* restrained Yale gold accent */
+  --gold-soft: #f1e6c4;
+  --ink: #0c1b2e;      /* near-navy text */
+  --muted: #566579;
+  --line: #d9e3f1;
+  --white: #ffffff;
+  --ok: #2f9e6f;
+  --warn: #c2683b;
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(0, 53, 107, 0.1);
+
+  /* typography: Muli/Mulish for body, Tenor Sans for headings */
+  --font-body: "Mulish", "Muli", system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+  --font-head: "Tenor Sans", "Mulish", system-ui, sans-serif;
+
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+h1, h2, h3, h4, .brand-name {
+  font-family: var(--font-head);
+  letter-spacing: -0.01em;
+}
+
+* { box-sizing: border-box; }
+
+/* flat design: no rounded corners anywhere */
+*, *::before, *::after { border-radius: 0 !important; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(1200px 500px at 80% -10%, var(--sky), transparent),
+    var(--cream);
+  color: var(--ink);
+}
+
+a { color: var(--navy-soft); }
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  background: var(--navy);
+  color: var(--white);
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+button:hover { background: var(--navy-soft); }
+button:active { transform: translateY(1px); }
+button.ghost {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid var(--line);
+}
+button.ghost:hover { background: var(--sky); }
+button:disabled { opacity: 0.55; cursor: not-allowed; }
+
+input, textarea {
+  font: inherit;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--ink);
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(79, 127, 196, 0.18);
+}
+
+label { font-size: 0.85rem; color: var(--muted); display: block; margin-bottom: 0.25rem; }

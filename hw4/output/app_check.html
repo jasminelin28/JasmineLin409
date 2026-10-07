@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campus Customs - App Check (Problem 11)</title>
+    <style>
+      :root {
+        --navy: #00356b;
+        --navy-soft: #0e4c92;
+        --sky: #e6eef8;
+        --ink: #0c1b2e;
+        --muted: #566579;
+        --line: #d9e3f1;
+        --gold: #d8b54e;
+      }
+      body {
+        font-family: "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+        color: var(--ink);
+        margin: 0;
+        background: #f6f9fd;
+        line-height: 1.6;
+      }
+      header {
+        background: var(--navy);
+        color: #fff;
+        padding: 1.75rem 1.5rem;
+      }
+      header h1 { margin: 0 0 0.25rem; font-size: 1.6rem; }
+      header p { margin: 0; color: var(--sky); }
+      main { max-width: 900px; margin: 0 auto; padding: 1.5rem; }
+      .check {
+        background: #fff;
+        border: 1px solid var(--line);
+        box-shadow: 0 6px 20px rgba(0, 53, 107, 0.08);
+        margin-bottom: 2rem;
+        overflow: hidden;
+      }
+      .check h2 {
+        margin: 0;
+        padding: 0.9rem 1.1rem;
+        background: var(--navy-soft);
+        color: #fff;
+        font-size: 1.1rem;
+        border-left: 6px solid var(--gold);
+      }
+      .check .body { padding: 1.1rem; }
+      .check img {
+        width: 100%;
+        height: auto;
+        border: 1px solid var(--line);
+        display: block;
+        margin-bottom: 0.9rem;
+      }
+      .proof {
+        margin: 0;
+        color: var(--ink);
+      }
+      .proof strong { color: var(--navy); }
+      footer {
+        max-width: 900px;
+        margin: 0 auto 2rem;
+        padding: 0 1.5rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Campus Customs - Live App Check</h1>
+      <p>Problem 11: evidence that key features work on the running site.</p>
+    </header>
+
+    <main>
+      <section class="check">
+        <h2>1. Chat checks real inventory &amp; price from the database</h2>
+        <div class="body">
+          <img
+            src="app_check_images/inventory.png"
+            alt="Ask Dan chat showing the Basic Hoodie Big Yale is $68 with 5 in stock in size M"
+          />
+          <p class="proof">
+            In the "Ask Dan" chat, the shopper asks the price and size-M stock of the
+            Basic Hoodie Big Yale. The agent replies
+            <strong>"$68, and 5 are in stock in size M"</strong> - these numbers come
+            straight from the <code>catalogue</code> and <code>inventory</code> tables
+            via the agent's tools, proving the answers are honest and not invented.
+          </p>
+        </div>
+      </section>
+
+      <section class="check">
+        <h2>2. Category question renders dynamic product cards</h2>
+        <div class="body">
+          <img
+            src="app_check_images/dynamic_cards.png"
+            alt="Products page showing hoodie cards under 'Handsome Dan found these for you'"
+          />
+          <p class="proof">
+            After asking <strong>"How many hoodies do you have?"</strong>, the agent's
+            structured matches appear on the page under
+            <strong>"Handsome Dan found these for you"</strong> as product cards with
+            image, name, price and short info (27 hoodies surfaced). This proves the
+            agent returns structured results and the front end renders them live; each
+            card also links to its single-item page.
+          </p>
+        </div>
+      </section>
+
+      <section class="check">
+        <h2>3. Usability feature (Problem 9): filter chips &amp; sort</h2>
+        <div class="body">
+          <img
+            src="app_check_images/usability_filter_sort.png"
+            alt="Products page with garment-type filter chips and a sort dropdown"
+          />
+          <p class="proof">
+            The Products page offers <strong>garment-type filter chips</strong>
+            (All Items, Hoodie, Crewneck, Quarter-Zip Pullover, T-Shirt, ...) and a
+            <strong>Sort</strong> control (Name, Price low-to-high, Price high-to-low).
+            This proves the Problem 9 usability improvement is live, letting a shopper
+            narrow 102 products and reorder them in a couple of clicks.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Screenshots captured from the running app (frontend on
+      <code>localhost:5173</code>, FastAPI backend on <code>localhost:8000</code>).
+      Images are in <code>app_check_images/</code>.
+    </footer>
+  </body>
+</html>
